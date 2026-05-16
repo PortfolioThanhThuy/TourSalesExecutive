@@ -119,7 +119,8 @@
     </nav>
 
     <!-- 1. Hero / Giới thiệu -->
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <!-- Đã thay đổi flex-col thành flex-col-reverse để đưa ảnh lên trên cùng ở giao diện mobile -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
         <div class="w-full md:w-3/5 reveal">
             <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-apple-dark leading-tight mb-6">
                 Tour Sales <br>
@@ -282,30 +283,43 @@
                     </div>
                     
                     <h3 class="text-2xl font-bold mb-2 relative z-10 transition-colors group-hover:text-apple-accent">Kênh TikTok Libra Tarot</h3>
-                    <p class="text-gray-400 text-sm mb-5 relative z-10">
+                    <p class="text-gray-400 text-sm mb-4 relative z-10">
                         Xây dựng nội dung trải bài tarot đánh trúng insight khách hàng về tình cảm, công việc.
                     </p>
 
-                    <a href="https://www.tiktok.com/@healingwithlibra" target="_blank" class="inline-flex items-center justify-center gap-2 bg-apple-accent text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-yellow-600 transition-colors mb-6 relative z-10 shadow-md">
-                        <i class="fas fa-play-circle"></i> Truy cập kênh TikTok
-                    </a>
-                    
-                    <div class="grid grid-cols-2 gap-4 relative z-10 border-t border-gray-700 pt-6 mt-auto">
-                        <div>
-                            <p class="text-3xl font-bold text-white mb-1">7K+</p>
-                            <p class="text-xs text-gray-400 uppercase tracking-wider">Followers</p>
+                    <!-- Thêm các Tag chủ đề để lấp đầy khoảng trống -->
+                    <div class="mb-6 relative z-10 flex-grow">
+                        <strong class="text-white block text-sm mb-3">Chủ đề khai thác:</strong>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-heart text-pink-400 mr-1.5"></i>Tình cảm</span>
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-briefcase text-blue-400 mr-1.5"></i>Công việc</span>
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-leaf text-green-400 mr-1.5"></i>Chữa lành</span>
                         </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white mb-1">200K</p>
-                            <p class="text-xs text-gray-400 uppercase tracking-wider">Views/Clip</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold text-apple-accent mb-1">30+</p>
-                            <p class="text-xs text-gray-400 uppercase tracking-wider">Khách/Tháng</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold text-green-400 mb-1">80%</p>
-                            <p class="text-xs text-gray-400 uppercase tracking-wider">Khách quay lại</p>
+                    </div>
+
+                    <!-- Gộp nút bấm và grid thông số xuống dưới cùng -->
+                    <div class="mt-auto relative z-10 w-full">
+                        <a href="https://www.tiktok.com/@healingwithlibra" target="_blank" class="flex items-center justify-center gap-2 bg-apple-accent text-white px-4 py-3 rounded-xl text-sm font-semibold hover:bg-yellow-600 transition-colors mb-6 shadow-md w-full">
+                            <i class="fas fa-play-circle"></i> Truy cập kênh TikTok
+                        </a>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-700 pt-6">
+                            <div>
+                                <p class="text-3xl font-bold text-white mb-1">7K+</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Followers</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white mb-1">200K</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Views/Clip</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-apple-accent mb-1">30+</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách/Tháng</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-green-400 mb-1">80%</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách quay lại</p>
+                            </div>
                         </div>
                     </div>
                 </div>
