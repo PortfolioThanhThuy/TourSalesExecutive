@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Thuy's Portfolio</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Config for Custom Colors/Fonts -->
     <script>
         tailwind.config = {
             theme: {
@@ -79,16 +75,13 @@
 </head>
 <body class="font-sans leading-relaxed selection:bg-apple-accent selection:text-white">
 
-    <!-- Navigation Bar -->
     <nav class="fixed w-full z-50 glass-header transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo/Tên -->
                 <a href="#home" class="text-xl font-semibold tracking-tight text-apple-dark">
                     About me
                 </a>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#skills" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Skills</a>
                     <a href="#experience" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Experience</a>
@@ -97,7 +90,6 @@
                     <a href="#contact" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-apple-dark focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
@@ -106,7 +98,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
                 <a href="#skills" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Skills</a>
@@ -118,15 +109,12 @@
         </div>
     </nav>
 
-    <!-- 1. Hero / Giới thiệu -->
-    <!-- Đã thay đổi flex-col thành flex-col-reverse để đưa ảnh lên trên cùng ở giao diện mobile -->
     <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
         <div class="w-full md:w-3/5 reveal text-center md:text-left">
             <h1 class="text-4xl md:text-7xl font-bold tracking-tighter text-apple-dark leading-tight mb-6">
                  <br>
                 <span class="text-gradient">Social Media</span>
             </h1>
-            <!-- text-sm cho mobile, md:text-xl cho desktop -->
             <p class="text-sm md:text-xl text-apple-light mb-8 max-w-2xl font-light mx-auto md:mx-0">
                 Là sinh viên chuyên ngành Quản lý Di sản Văn hóa, mình kết hợp tư duy thấu cảm từ lĩnh vực Tâm lý (Tarot) để kiến tạo những trải nghiệm dịch vụ khách hàng sâu sắc, chân thực và hướng tới kết quả.
             </p>
@@ -134,7 +122,6 @@
                 <a href="#contact" class="bg-apple-dark text-white px-8 py-4 rounded-full font-medium hover:bg-black transition-colors duration-300 text-center shadow-lg">
                     Kết nối với mình
                 </a>
-                <!-- Nút Tải CV: Yêu cầu file CV.pdf nằm cùng thư mục -->
                 <a href="CV.pdf" target="_blank" download="Tran_Thi_Thanh_Thuy_CV.pdf" class="bg-white text-apple-dark border border-gray-200 px-8 py-4 rounded-full font-medium hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 text-center flex items-center justify-center gap-2">
                     <i class="fas fa-download"></i> Tải CV PDF
                 </a>
@@ -142,22 +129,19 @@
         </div>
         <div class="w-full md:w-2/5 flex justify-center reveal">
             <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/645418717_122175510392424755_3831792281891622661_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=rchohAo5WEkQ7kNvwE7KYf9&_nc_oc=AdrhBXA8d9AnV8LT1mRc3aNHLz0yvQXd5aGOhBRH5w_NZMWXINh3SMg1tSbqoxGNVl0&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=ZleSWXntavh2hiBi665xlg&_nc_ss=7b2a8&oh=00_Af7sb-zENfl1a-6FQosF9tzmxLUEIvIlKlJcgMOjX_wZ5Q&oe=6A0E546E" alt="Chân dung Trần Thị Thanh Thúy" class="object-cover w-full h-full object-center scale-105 hover:scale-100 transition-transform duration-700">
+                <img src="avt.jpg" alt="Chân dung Trần Thị Thanh Thúy" class="object-cover w-full h-full object-center scale-105 hover:scale-100 transition-transform duration-700">
             </div>
         </div>
     </section>
 
-    <!-- 2. Kỹ năng & Phong cách (Tools & Skills) -->
     <section id="skills" class="py-24 bg-white px-6 lg:px-8">
         <div class="max-w-7xl mx-auto reveal">
             <div class="text-center mb-16">
-                <!-- Đồng bộ hóa font cho tất cả các Title -->
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Signature Style</h2>
                 <p class="text-apple-light text-lg">Những giá trị cốt lõi làm nên sự khác biệt.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
                         <i class="fas fa-ear-listen text-xl"></i>
@@ -168,7 +152,6 @@
                     </p>
                 </div>
                 
-                <!-- Card 2 -->
                 <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
                         <i class="fas fa-pen-nib text-xl"></i>
@@ -183,7 +166,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
                         <i class="fas fa-language text-xl"></i>
@@ -195,7 +177,6 @@
                     <p class="text-apple-light text-sm">Reading & Listening: 550 <br> Speaking & Writing: 290</p>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
                     <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
                         <i class="fas fa-laptop-code text-xl"></i>
@@ -211,7 +192,6 @@
         </div>
     </section>
 
-    <!-- 3. Kinh nghiệm làm việc -->
     <section id="experience" class="py-24 px-6 lg:px-8 max-w-5xl mx-auto reveal">
         <div class="text-center mb-16">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Journey</h2>
@@ -220,7 +200,6 @@
 
         <div class="relative border-l border-gray-200 ml-3 md:ml-6">
             
-            <!-- Item 1 -->
             <div class="mb-12 ml-8 md:ml-12 relative group">
                 <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-apple-dark group-hover:bg-apple-accent transition-colors duration-300 shadow-sm"></span>
                 <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
@@ -233,7 +212,6 @@
                 </p>
             </div>
 
-            <!-- Item 2 -->
             <div class="mb-12 ml-8 md:ml-12 relative group">
                 <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
                 <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
@@ -246,7 +224,6 @@
                 </p>
             </div>
 
-            <!-- Item 3 -->
             <div class="mb-4 ml-8 md:ml-12 relative group">
                 <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
                 <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
@@ -261,9 +238,7 @@
         </div>
     </section>
 
-    <!-- 4. Dự án & Case Study -->
     <section id="projects" class="py-24 bg-apple-dark text-white px-6 lg:px-8 overflow-hidden relative">
-        <!-- Background decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-apple-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
@@ -275,7 +250,6 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <!-- Dự án 1: Kênh TikTok -->
                 <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-apple-accent/20 overflow-hidden border border-gray-700 hover:border-apple-accent/50 flex flex-col h-full">
                     
                     <div class="flex justify-between items-start mb-6 relative z-10">
@@ -290,7 +264,6 @@
                         Xây dựng nội dung trải bài tarot đánh trúng insight khách hàng về tình cảm, công việc.
                     </p>
 
-                    <!-- Thêm các Tag chủ đề để lấp đầy khoảng trống -->
                     <div class="mb-6 relative z-10 flex-grow">
                         <strong class="text-white block text-sm mb-3">Chủ đề khai thác:</strong>
                         <div class="flex flex-wrap gap-2">
@@ -300,7 +273,6 @@
                         </div>
                     </div>
 
-                    <!-- Gộp nút bấm và grid thông số xuống dưới cùng -->
                     <div class="mt-auto relative z-10 w-full">
                         <a href="https://www.tiktok.com/@healingwithlibra" target="_blank" class="flex items-center justify-center gap-2 bg-apple-accent text-white px-4 py-3 rounded-xl text-sm font-semibold hover:bg-yellow-600 transition-colors mb-6 shadow-md w-full">
                             <i class="fas fa-play-circle"></i> Truy cập kênh TikTok
@@ -327,7 +299,6 @@
                     </div>
                 </div>
 
-                <!-- Case Study 1 -->
                 <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden border border-gray-700 hover:border-blue-500/50 cursor-pointer flex flex-col h-full">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-transparent transition-all duration-500"></div>
                     
@@ -357,23 +328,21 @@
                                 <p>Vợ chồng đã hàn gắn thành công và sinh thêm một bé trai.</p>
                             </div>
                             
-                            <!-- Hình ảnh Feedback -->
                             <div class="grid grid-cols-3 gap-2">
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/701651601_122258327114037985_19284074852430154_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B1_zJSH5MOkQ7kNvwEEshk6&_nc_oc=Adqup7ws4VmZAJo41VNSMN1vgA2Pr7HX5r73c8O9lf7P5nSYS3PXMqS4XQ0ggbtRQuWLo_jI6bhmMYFAc7e3G0y7&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=GRJLNI99l1KYfMeoETaZGw&_nc_ss=7b2a8&oh=00_Af6DuOUBCZI-OFXEpRvl-A300_iFV16JcHJonAOehM2q7g&oe=6A0E96E4" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c11.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/700606602_122258327162037985_6743108136602468103_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l5nXccsc3a4Q7kNvwFtUwrx&_nc_oc=AdrnVRzNNBPJvXbC2ceq8CLDY_ESRvM_N0ce0otGQS6m-hyp0hfoOLxxmFp8Wj5HZE8XgHH0Fmlo7_R4lqHmTqiz&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=GRJLNI99l1KYfMeoETaZGw&_nc_ss=7b2a8&oh=00_Af4X-PaaOXyClxkEHnLQodkNE1Oz2Jo-h7jjDBH_Q535iA&oe=6A0E8767" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c12.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/701651601_122258327114037985_19284074852430154_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B1_zJSH5MOkQ7kNvwEEshk6&_nc_oc=Adqup7ws4VmZAJo41VNSMN1vgA2Pr7HX5r73c8O9lf7P5nSYS3PXMqS4XQ0ggbtRQuWLo_jI6bhmMYFAc7e3G0y7&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=GRJLNI99l1KYfMeoETaZGw&_nc_ss=7b2a8&oh=00_Af6DuOUBCZI-OFXEpRvl-A300_iFV16JcHJonAOehM2q7g&oe=6A0E96E4" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c13.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Case Study 2 -->
                 <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-pink-500/20 overflow-hidden border border-gray-700 hover:border-pink-500/50 cursor-pointer flex flex-col h-full">
                     <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-transparent transition-all duration-500"></div>
                     
@@ -403,16 +372,15 @@
                                 <p>Cặp đôi tiến đến hôn nhân và hiện tại đã có em bé.</p>
                             </div>
                             
-                            <!-- Hình ảnh Feedback -->
                             <div class="grid grid-cols-3 gap-2">
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/701301719_122258329082037985_5459532595090295582_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4vSOiKALQo4Q7kNvwEc3VhJ&_nc_oc=Adq86P5ITjxfR-G15doy5j4yZvz_yUJW92w2Ak_UaCcCIi5PVdiJ1oQKNJJCsNb9SO-gxfupTscNUgH6PNGQ13V5&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=vAMxV-plTywPmHF9vwKGjw&_nc_ss=7b2a8&oh=00_Af5v4K4la5Jv1bRCmnTmnpxkltoJtkDIVkG0RwdUOY09bQ&oe=6A0E79E2" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c21.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/701281770_122258329058037985_3166312401781040760_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-iSWk0rvDDQQ7kNvwFO0k_0&_nc_oc=AdoVE8cAffUS4YU_k981fl6z-L6UMQxHdy-uQMgd2ncgAczK4dZWV95EbwlRg_mLuGoR0ipJMj7ly8aK9gB6-e9S&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=vAMxV-plTywPmHF9vwKGjw&_nc_ss=7b2a8&oh=00_Af7mjJ3SAJXfrwk7MJPPEy6WmNsZulmA75wtQkKsfrVQcQ&oe=6A0E9D71" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c22.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                                 <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/701326126_122258329124037985_6160177641476314402_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MX8y1xjvjOcQ7kNvwHolOMX&_nc_oc=AdrRm4-L2TzWW1b0ex0nsTuMeAHE7xMj1wHRF3s_06VUO-25FDs_-Y4FSFTEt6AxgMlboNgRLo-lUREJN0-z4RMR&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=vAMxV-plTywPmHF9vwKGjw&_nc_ss=7b2a8&oh=00_Af7KhCMhG_gsebZ9xj432Nvg-TlXNhZGfhDt2EDGCh7ASw&oe=6A0E9567" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+                                    <img src="c23.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
                                 </div>
                             </div>
                         </div>
@@ -423,10 +391,8 @@
         </div>
     </section>
 
-    <!-- 5. Thành tựu -->
     <section id="awards" class="py-24 bg-white px-6 lg:px-8">
         <div class="max-w-4xl mx-auto reveal text-center">
-            <!-- Thêm thẻ <br> ẩn trên desktop, hiện trên mobile để rớt dòng thẩm mỹ -->
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-12 leading-[1.2] md:leading-tight">Awards <br class="block md:hidden">& Certifications</h2>
             
             <div class="bg-apple-gray rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm inline-block w-full max-w-2xl">
@@ -435,17 +401,15 @@
                 <p class="text-lg text-gray-600 mb-4">Cuộc thi "Kết nối di sản - Sáng tạo tương lai"</p>
                 <p class="text-sm font-medium text-apple-light uppercase tracking-widest mb-8">Hội Di sản Văn Hóa TP. HCM</p>
 
-                <img src="https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/701488706_122258311988037985_7053025194363640665_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yCZHqO-Yqg8Q7kNvwGtqjWw&_nc_oc=AdqWuhJ4Zy2vLE2RleLeMfsn8a37ylYtb-BpEcrQ5B7jsIlq7NfblQFjcdXfb0Nr4pf6KmyBCIrtYF71M8Zh0RpS&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=Bbp6r9YwMBlCQicC0vnJKw&_nc_ss=7b2a8&oh=00_Af45fbLjJ4kAaB90UPQ4NcRgDdQU07YOGDoQle4kGC3C-w&oe=6A0E7BDB" alt="Chứng nhận Nhà sáng tạo triển vọng" class="w-full h-auto rounded-xl shadow-md border border-gray-200 hover:scale-[1.02] transition-transform duration-500">
+                <img src="a1.jpg" alt="Chứng nhận Nhà sáng tạo triển vọng" class="w-full h-auto rounded-xl shadow-md border border-gray-200 hover:scale-[1.02] transition-transform duration-500">
             </div>
         </div>
     </section>
 
-    <!-- 6. Liên hệ (Footer) -->
     <section id="contact" class="py-24 bg-apple-gray px-6 lg:px-8 border-t border-gray-200">
         <div class="max-w-7xl mx-auto reveal">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 
-                <!-- Contact Info -->
                 <div>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-6 leading-tight">Contact me</h2>
                     <p class="text-lg text-apple-light mb-10 max-w-md">
@@ -483,7 +447,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="bg-white p-8 md:p-10 rounded-3xl shadow-apple">
                     <form id="contactForm" class="space-y-6">
                         <div>
@@ -511,13 +474,11 @@
         <p class="text-sm text-apple-light">© 2026 Trần Thị Thanh Thúy - Content Writer.</p>
     </footer>
 
-    <!-- Lightbox Modal (Phóng to ảnh) -->
     <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
         <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer hover:text-gray-300 transition-colors">&times;</span>
         <img id="lightbox-img" src="" alt="Full screen feedback" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
     </div>
 
-    <!-- JavaScript cho Animation và Mobile Menu -->
     <script>
         // 1. Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
@@ -540,7 +501,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Khoảng cách từ dưới lên để trigger
+                var elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -548,7 +509,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Trigger once on load
+        reveal();
 
         // 3. Navbar Shadow on Scroll
         const navbar = document.getElementById('navbar');
@@ -562,24 +523,19 @@
 
         // 4. Xử lý Form Liên hệ (Chuyển hướng sang Gmail)
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Ngăn chặn tải lại trang
+            e.preventDefault();
             
-            // Lấy dữ liệu từ form
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Email người nhận (Email của bạn)
             const toEmail = 'tt546892@gmail.com';
             
-            // Tạo tiêu đề và nội dung email
             const subject = encodeURIComponent(`[Portfolio] Liên hệ từ ${name}`);
             const body = encodeURIComponent(`Tên người gửi: ${name}\nEmail liên hệ: ${email}\n\nNội dung lời nhắn:\n${message}`);
             
-            // Tạo link mở trình soạn thảo Gmail trên web
             const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${body}`;
             
-            // Mở tab mới dẫn đến Gmail
             window.open(gmailLink, '_blank');
         });
 
@@ -590,7 +546,6 @@
         function openLightbox(src) {
             lightboxImg.src = src;
             lightbox.classList.remove('hidden');
-            // Cần một độ trễ nhỏ (setTimeout) để CSS transition có thể nhận diện và tạo hiệu ứng mượt
             setTimeout(() => {
                 lightbox.classList.remove('opacity-0');
                 lightboxImg.classList.remove('scale-95');
@@ -602,13 +557,11 @@
             lightbox.classList.add('opacity-0');
             lightboxImg.classList.remove('scale-100');
             lightboxImg.classList.add('scale-95');
-            // Đợi hiệu ứng mờ dần xong (300ms) rồi mới ẩn hẳn khối div
             setTimeout(() => {
                 lightbox.classList.add('hidden');
             }, 300);
         }
 
-        // Đóng ảnh khi ấn phím Escape trên bàn phím
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape" && !lightbox.classList.contains('hidden')) {
                 closeLightbox();
