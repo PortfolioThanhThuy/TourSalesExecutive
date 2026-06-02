@@ -1,585 +1,1169 @@
 <!DOCTYPE html>
+
 <html lang="vi" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Thuy's Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        apple: {
-                            gray: '#F5F5F7',
-                            dark: '#1D1D1F',
-                            light: '#86868B',
-                            accent: '#D4C19C', // Titanium Gold
-                            blue: '#0066CC'
-                        }
-                    },
-                    boxShadow: {
-                        'apple': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
-                        'apple-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-                    }
-                }
-            }
-        }
-    </script>
+    <meta charset="UTF-8">
 
-    <style>
-        /* Custom Styles cho hiệu ứng Animation */
-        body {
-            background-color: #F5F5F7;
-            color: #1D1D1F;
-            -webkit-font-smoothing: antialiased;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
+    <title>Thanh Thuy's Portfolio</title>
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    
 
-        /* Glassmorphism cho Header */
-        .glass-header {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        /* Hiệu ứng gradient nền chữ */
-        .text-gradient {
-            background: linear-gradient(135deg, #1D1D1F 0%, #86868B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'sans-serif'],
+
+                    },
+
+                    colors: {
+
+                        apple: {
+
+                            gray: '#F5F5F7',
+
+                            dark: '#1D1D1F',
+
+                            light: '#86868B',
+
+                            accent: '#D4C19C', // Titanium Gold
+
+                            blue: '#0066CC'
+
+                        }
+
+                    },
+
+                    boxShadow: {
+
+                        'apple': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+
+                        'apple-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+
+    <style>
+
+        /* Custom Styles cho hiệu ứng Animation */
+
+        body {
+
+            background-color: #F5F5F7;
+
+            color: #1D1D1F;
+
+            -webkit-font-smoothing: antialiased;
+
+        }
+
+
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+
+        }
+
+
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        /* Glassmorphism cho Header */
+
+        .glass-header {
+
+            background: rgba(255, 255, 255, 0.7);
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+
+        }
+
+
+
+        /* Hiệu ứng gradient nền chữ */
+
+        .text-gradient {
+
+            background: linear-gradient(135deg, #1D1D1F 0%, #86868B 100%);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+        }
+
+    </style>
+
 </head>
+
 <body class="font-sans leading-relaxed selection:bg-apple-accent selection:text-white">
 
-    <nav class="fixed w-full z-50 glass-header transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#home" class="text-xl font-semibold tracking-tight text-apple-dark">
-                    About me
-                </a>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#skills" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Skills</a>
-                    <a href="#experience" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Experience</a>
-                    <a href="#projects" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Projects & Case Study</a>
-                    <a href="#awards" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Awards</a>
-                    <a href="#contact" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Contact</a>
-                </div>
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-apple-dark focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
-                <a href="#skills" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Skills</a>
-                <a href="#experience" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Experience</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Projects & Case Study</a>
-                <a href="#awards" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Awards</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Contact</a>
-            </div>
-        </div>
-    </nav>
 
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-        <div class="w-full md:w-3/5 reveal text-center md:text-left">
-            <h1 class="text-4xl md:text-7xl font-bold tracking-tighter text-apple-dark leading-tight mb-6">
-                 <br>
-                <span class="text-gradient">Content Marketing</span>
-            </h1>
-            <p class="text-sm md:text-xl text-apple-light mb-8 max-w-2xl font-light mx-auto md:mx-0">
-                Là một sinh viên chuyên ngành Quản lý Di sản Văn hóa có sự kết hợp tư duy độc đáo giữa Tarot Reader (Thấu hiểu tâm lý khách hàng thông qua huyền học và tâm lý) và TikTok Content Creator. Mục tiêu của em là tận dụng tối đa thế mạnh nhạy bén về tâm lý số đông, khả năng sáng tạo kịch bản đánh insight người xem và kỹ năng dựng clip thành thạo để chuyển hóa thành các chiến dịch Content Marketing đột phá, giúp gia tăng mức độ nhận diện thương hiệu cũng như tỷ lệ chuyển đổi cho doanh nghiệp trên các nền tảng số.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="#contact" class="bg-apple-dark text-white px-8 py-4 rounded-full font-medium hover:bg-black transition-colors duration-300 text-center shadow-lg">
-                    Kết nối với mình
-                </a>
-                <a href="CV.pdf" target="_blank" download="TranThiThanhThuy.pdf" class="bg-white text-apple-dark border border-gray-200 px-8 py-4 rounded-full font-medium hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 text-center flex items-center justify-center gap-2">
-                    <i class="fas fa-download"></i> Tải CV PDF
-                </a>
-            </div>
-        </div>
-        <div class="w-full md:w-2/5 flex justify-center reveal">
-            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                <img src="avt.jpg" alt="Chân dung Trần Thị Thanh Thúy" class="object-cover w-full h-full object-center scale-105 hover:scale-100 transition-transform duration-700">
-            </div>
-        </div>
-    </section>
+    <nav class="fixed w-full z-50 glass-header transition-all duration-300" id="navbar">
 
-    <section id="skills" class="py-24 bg-white px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto reveal">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Signature Style</h2>
-                <p class="text-apple-light text-lg">Những giá trị cốt lõi làm nên sự khác biệt.</p>
-            </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
-                        <i class="fas fa-ear-listen text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Tư duy Thấu cảm</h3>
-                    <p class="text-apple-light text-sm leading-relaxed">
-                        Lắng nghe chủ động, đặt câu hỏi đúng trọng tâm và giải thích vấn đề một cách rõ ràng, dễ hiểu. Biến sự phức tạp thành hành động cụ thể.
-                    </p>
-                </div>
-                
-                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
-                        <i class="fas fa-pen-nib text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Kỹ năng Cốt lõi</h3>
-                    <ul class="text-apple-light text-sm space-y-2">
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Hỗ trợ sự kiện</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Giao tiếp Tiếng Anh</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Thuyết phục khách hàng</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Viết lách và trình bày nội dung</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Lên ý tưởng, kịch bản và edit video</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Làm việc độc lập và teamwork</li>
-                    </ul>
-                </div>
+            <div class="flex justify-between items-center h-16">
 
-                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
-                        <i class="fas fa-language text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Ngoại ngữ & Học vấn</h3>
-                    <p class="text-apple-dark font-medium text-sm mb-1">Cử nhân Quản lý Văn Hóa</p>
-                    <p class="text-apple-light text-sm mb-4">ĐH Văn Hóa TP.HCM (GPA 3.47/4.00)</p>
-                    <p class="text-apple-dark font-medium text-sm mb-1">Tiếng Anh (TOEIC)</p>
-                    <p class="text-apple-light text-sm">Reading & Listening: 550 <br> Speaking & Writing: 290</p>
-                </div>
+                <a href="#home" class="text-xl font-semibold tracking-tight text-apple-dark">
 
-                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
-                        <i class="fas fa-laptop-code text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Công cụ thành thạo</h3>
-                    <ul class="text-apple-light text-sm space-y-2">
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Capcut</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Canva</li>
-                        <li><i class="fas fa-check text-apple-accent mr-2"></i>AI Tools: Gemini, NotebookLM,...</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                    About me
 
-    <section id="experience" class="py-24 px-6 lg:px-8 max-w-5xl mx-auto reveal">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Journey</h2>
-            <p class="text-apple-light text-lg">Kinh nghiệm làm việc và phát triển bản thân.</p>
+                </a>
+
+                
+
+                <div class="hidden md:flex space-x-8">
+
+                    <a href="#skills" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Skills</a>
+
+                    <a href="#experience" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Experience</a>
+
+                    <a href="#projects" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Projects & Case Study</a>
+
+                    <a href="#awards" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Awards</a>
+
+                    <a href="#contact" class="text-sm font-medium text-apple-light hover:text-apple-dark transition-colors">Contact</a>
+
+                </div>
+
+
+
+                <div class="md:hidden flex items-center">
+
+                    <button id="mobile-menu-btn" class="text-apple-dark focus:outline-none">
+
+                        <i class="fas fa-bars text-xl"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="relative border-l border-gray-200 ml-3 md:ml-6">
-            
-            <div class="mb-12 ml-8 md:ml-12 relative group">
-                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-apple-dark group-hover:bg-apple-accent transition-colors duration-300 shadow-sm"></span>
-                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                    <h3 class="text-xl font-bold text-apple-dark">Tiktok Content Creator</h3>
-                    <span class="text-sm font-medium text-apple-accent bg-apple-accent/10 px-3 py-1 rounded-full w-max">2024 - Nay</span>
-                </div>
-                <p class="text-base font-medium text-gray-600 mb-3">Chủ kênh Tiktok Libra Tarot (7000+ followers)</p>
-                <p class="text-apple-light text-sm leading-relaxed text-justify md:text-left">
-                    Nghiên cứu & Định vị Thương hiệu: Xác định ngách nội dung độc đáo (Tâm lý học kết hợp Huyền học), phân tích tệp người xem mục tiêu để xây dựng thành công cộng đồng 7.000 followers từ con số 0. Quản trị quy trình sản xuất nội dung: Chủ động thực hiện 100% các khâu từ nghiên cứu insight người xem, lên ý tưởng kịch bản độc lập, quay dựng đến hậu kỳ bằng CapCut để tối ưu hóa hiệu suất truyền tải hình ảnh và âm thanh. Ứng dụng kỹ năng chuyển hóa nội dung, chuyển đổi các kiến thức trừu tượng thành dạng video ngắn tạo sự hấp dẫn, dễ tiếp cận, giúp tăng tỷ lệ giữ chân người xem và thu hút lượng lớn khách hàng tiềm năng inbox tư vấn sâu. 
-                </p>
-            </div>
-                        
-            <div class="mb-12 ml-8 md:ml-12 relative group">
-                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-apple-dark group-hover:bg-apple-accent transition-colors duration-300 shadow-sm"></span>
-                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                    <h3 class="text-xl font-bold text-apple-dark">Freelancer</h3>
-                    <span class="text-sm font-medium text-apple-accent bg-apple-accent/10 px-3 py-1 rounded-full w-max">2024 - Nay</span>
-                </div>
-                <p class="text-base font-medium text-gray-600 mb-3">Người tư vấn tâm lý và định hướng (Tarot Reader)</p>
-                <p class="text-apple-light text-sm leading-relaxed text-justify md:text-left">
-                    Tiếp cận và lắng nghe trực tiếp câu chuyện của hàng trăm khách hàng chủ đề tình cảm và công việc thông qua các phiên tư vấn cá nhân, đưa ra giải pháp kết hợp từ tâm lý và huyền học để định hướng tương lai, từ đó rèn luyện khả năng thấu hiểu tâm lý, mong muốn thầm kín và những nỗi đau thực tế của tệp khách hàng trẻ. Đặt câu hỏi khai thác vấn đề thông minh, giải thích và định hướng giải pháp một cách rõ ràng, mạch lạc, giúp xây dựng niềm tin và độ uy tín cao cho thương hiệu cá nhân. Liên kết Content Marketing: Toàn bộ dữ liệu thực tế thu thập được từ quá trình tư vấn trực tiếp này sử dụng làm chất liệu thô giúp cung cấp ý tưởng, chủ đề bài viết và kịch bản video đánh trúng tâm lý số đông người xem trên kênh TikTok.
-                </p>
-            </div>
-            
-            <div class="mb-12 ml-8 md:ml-12 relative group">
-                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
-                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                    <h3 class="text-xl font-bold text-apple-dark">Thực tập sinh Thuyết minh & Truyền thông</h3>
-                    <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-max">Tháng 3 - 6/2026</span>
-                </div>
-                <p class="text-base font-medium text-gray-600 mb-3">Bảo tàng Tôn Đức Thắng</p>
-                <p class="text-apple-light text-sm leading-relaxed text-justify md:text-left">
-                    Hỗ trợ quay, dựng video content để quảng bá cho bảo tàng. Trực tiếp hỗ trợ thuyết minh về các thông tin lịch sử, cuộc đời và sự nghiệp Chủ tịch Tôn Đức Thắng cho khách tham quan.
-                </p>
+        
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Skills</a>
+
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Experience</a>
+
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Projects & Case Study</a>
+
+                <a href="#awards" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Awards</a>
+
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-apple-dark hover:bg-gray-50 rounded-md">Contact</a>
+
             </div>
 
-            <div class="mb-4 ml-8 md:ml-12 relative group">
-                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
-                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                    <h3 class="text-xl font-bold text-apple-dark">Thực tập sinh Tổ chức sự kiện</h3>
-                    <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-max">Tháng 6 - 7/2025</span>
-                </div>
-                <p class="text-base font-medium text-gray-600 mb-3">Trung tâm Văn Hóa TP. Thủ Đức</p>
-                <p class="text-apple-light text-sm leading-relaxed text-justify md:text-left">
-                    Tham gia hỗ trợ tổ chức các hoạt động văn hóa, giáo dục cho thiếu nhi tại Đường sách Thủ Đức. Phối hợp chuẩn bị nội dung, hướng dẫn và tương tác trực tiếp với các em nhỏ trong các trò chơi thi đua kiến thức.
-                </p>
-            </div>
         </div>
+
+    </nav>
+
+
+
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+
+        <div class="w-full md:w-3/5 reveal text-center md:text-left">
+
+            <h1 class="text-4xl md:text-7xl font-bold tracking-tighter text-apple-dark leading-tight mb-6">
+
+                 <br>
+
+                <span class="text-gradient">Content Marketing</span>
+
+            </h1>
+
+            <p class="text-sm md:text-xl text-apple-light mb-8 max-w-2xl font-light mx-auto md:mx-0 text-justify">
+
+                Là một sinh viên chuyên ngành Quản lý Di sản Văn hóa có sự kết hợp tư duy độc đáo giữa Tarot Reader (Thấu hiểu tâm lý khách hàng thông qua huyền học và tâm lý) và TikTok Content Creator. Mục tiêu của em là tận dụng tối đa thế mạnh nhạy bén về tâm lý số đông, khả năng sáng tạo kịch bản đánh insight người xem và kỹ năng dựng clip thành thạo để chuyển hóa thành các chiến dịch Content Marketing đột phá, giúp gia tăng mức độ nhận diện thương hiệu cũng như tỷ lệ chuyển đổi cho doanh nghiệp trên các nền tảng số.
+
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+
+                <a href="#contact" class="bg-apple-dark text-white px-8 py-4 rounded-full font-medium hover:bg-black transition-colors duration-300 text-center shadow-lg">
+
+                    Kết nối với mình
+
+                </a>
+
+                <a href="CV.pdf" target="_blank" download="TranThiThanhThuy.pdf" class="bg-white text-apple-dark border border-gray-200 px-8 py-4 rounded-full font-medium hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 text-center flex items-center justify-center gap-2">
+
+                    <i class="fas fa-download"></i> Tải CV PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="w-full md:w-2/5 flex justify-center reveal">
+
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+
+                <img src="avt.jpg" alt="Chân dung Trần Thị Thanh Thúy" class="object-cover w-full h-full object-center scale-105 hover:scale-100 transition-transform duration-700">
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section id="projects" class="py-24 bg-apple-dark text-white px-6 lg:px-8 overflow-hidden relative">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-apple-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-        <div class="max-w-7xl mx-auto relative z-10 reveal">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-white leading-tight">Project & Case Study</h2>
-                <p class="text-gray-400 text-lg">Dự án tiêu biểu & Các trường hợp tư vấn thành công.</p>
-            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                
-                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-apple-accent/20 overflow-hidden border border-gray-700 hover:border-apple-accent/50 flex flex-col h-full">
-                    
-                    <div class="flex justify-between items-start mb-6 relative z-10">
-                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
-                            <i class="fab fa-tiktok text-2xl text-white"></i>
-                        </div>
-                        <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full">Top Project</span>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold mb-2 relative z-10 transition-colors group-hover:text-apple-accent">Kênh TikTok Libra Tarot</h3>
-                    <p class="text-gray-400 text-sm mb-4 relative z-10">
-                        Xây dựng nội dung trải bài tarot đánh trúng insight khách hàng về tình cảm, công việc.
-                    </p>
+    <section id="skills" class="py-24 bg-white px-6 lg:px-8">
 
-                    <div class="mb-6 relative z-10 flex-grow">
-                        <strong class="text-white block text-sm mb-3">Chủ đề khai thác:</strong>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-heart text-pink-400 mr-1.5"></i>Tình cảm</span>
-                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-briefcase text-blue-400 mr-1.5"></i>Công việc</span>
-                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-leaf text-green-400 mr-1.5"></i>Chữa lành</span>
-                        </div>
-                    </div>
+        <div class="max-w-7xl mx-auto reveal">
 
-                    <div class="mt-auto relative z-10 w-full">
-                        <a href="https://www.tiktok.com/@healingwithlibra" target="_blank" class="flex items-center justify-center gap-2 bg-apple-accent text-white px-4 py-3 rounded-xl text-sm font-semibold hover:bg-yellow-600 transition-colors mb-6 shadow-md w-full">
-                            <i class="fas fa-play-circle"></i> Truy cập kênh TikTok
-                        </a>
-                        
-                        <div class="grid grid-cols-2 gap-4 border-t border-gray-700 pt-6">
-                            <div>
-                                <p class="text-3xl font-bold text-white mb-1">7K+</p>
-                                <p class="text-xs text-gray-400 uppercase tracking-wider">Followers</p>
-                            </div>
-                            <div>
-                                <p class="text-3xl font-bold text-white mb-1">200K</p>
-                                <p class="text-xs text-gray-400 uppercase tracking-wider">Views/Clip</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold text-apple-accent mb-1">30+</p>
-                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách/Tháng</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold text-green-400 mb-1">80%</p>
-                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách quay lại</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mb-16">
 
-                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden border border-gray-700 hover:border-blue-500/50 cursor-pointer flex flex-col h-full">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-transparent transition-all duration-500"></div>
-                    
-                    <div class="mb-6 relative z-10">
-                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
-                            <i class="fas fa-heart-circle-check text-2xl text-blue-400"></i>
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold mb-2 relative z-10">Case Study 1: Hàn gắn hôn nhân</h3>
-                    <div class="flex items-center gap-2 mb-4 relative z-10">
-                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">Thời gian: 1 năm</span>
-                    </div>
-                    
-                    <div class="space-y-4 text-sm text-gray-300 relative z-10 flex-grow flex flex-col">
-                        <div>
-                            <strong class="text-white block mb-1">Vấn đề:</strong>
-                            <p class="text-gray-400">Khách hàng nữ (có 1 bé 5 tuổi) tìm đến khi vợ chồng đang trên bờ vực ly hôn.</p>
-                        </div>
-                        <div>
-                            <strong class="text-blue-400 block mb-1">Giải pháp:</strong>
-                            <p>Đồng hành, tư vấn tâm lý thông qua thông điệp Tarot và tâm lý tình cảm học.</p>
-                        </div>
-                        <div class="mt-auto pt-4 space-y-3">
-                            <div class="bg-blue-500/10 p-3 rounded-xl border border-blue-500/20">
-                                <strong class="text-white block mb-1"><i class="fas fa-check-circle text-blue-400 mr-2"></i>Kết quả:</strong>
-                                <p>Vợ chồng đã hàn gắn thành công và sinh thêm một bé trai.</p>
-                            </div>
-                            
-                            <div class="grid grid-cols-3 gap-2">
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c11.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c12.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c13.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Signature Style</h2>
 
-                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-pink-500/20 overflow-hidden border border-gray-700 hover:border-pink-500/50 cursor-pointer flex flex-col h-full">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-transparent transition-all duration-500"></div>
-                    
-                    <div class="mb-6 relative z-10">
-                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
-                            <i class="fas fa-ring text-2xl text-pink-400"></i>
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold mb-2 relative z-10">Case Study 2: Định hướng tình cảm</h3>
-                    <div class="flex items-center gap-2 mb-4 relative z-10">
-                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">Thời gian: 1 năm</span>
-                    </div>
-                    
-                    <div class="space-y-4 text-sm text-gray-300 relative z-10 flex-grow flex flex-col">
-                        <div>
-                            <strong class="text-white block mb-1">Vấn đề:</strong>
-                            <p class="text-gray-400">Khách nữ yêu bạn trai lâu năm nhưng chưa cưới, nhiều lần ngắt kết nối, im lặng.</p>
-                        </div>
-                        <div>
-                            <strong class="text-pink-400 block mb-1">Giải pháp:</strong>
-                            <p>Phân tích vấn đề, định hướng tâm lý và đồng hành xử lý các khúc mắc trong mối quan hệ.</p>
-                        </div>
-                        <div class="mt-auto pt-4 space-y-3">
-                            <div class="bg-pink-500/10 p-3 rounded-xl border border-pink-500/20">
-                                <strong class="text-white block mb-1"><i class="fas fa-check-circle text-pink-400 mr-2"></i>Kết quả:</strong>
-                                <p>Cặp đôi tiến đến hôn nhân và hiện tại đã có em bé.</p>
-                            </div>
-                            
-                            <div class="grid grid-cols-3 gap-2">
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c21.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c22.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-                                    <img src="c23.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-apple-light text-lg">Những giá trị cốt lõi làm nên sự khác biệt.</p>
 
-            </div>
-        </div>
-    </section>
+            </div>
 
-    <section id="awards" class="py-24 bg-white px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto reveal text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-12 leading-[1.2] md:leading-tight">Awards <br class="block md:hidden">& Certifications</h2>
-            
-            <div class="bg-apple-gray rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm inline-block w-full max-w-2xl">
-                <i class="fas fa-award text-5xl text-apple-accent mb-6"></i>
-                <h3 class="text-2xl font-bold text-apple-dark mb-2">Nhà sáng tạo triển vọng</h3>
-                <p class="text-lg text-gray-600 mb-4">Cuộc thi "Kết nối di sản - Sáng tạo tương lai"</p>
-                <p class="text-sm font-medium text-apple-light uppercase tracking-widest mb-8">Hội Di sản Văn Hóa TP. HCM</p>
 
-                <img src="a1.jpg" alt="Chứng nhận Nhà sáng tạo triển vọng" class="w-full h-auto rounded-xl shadow-md border border-gray-200 hover:scale-[1.02] transition-transform duration-500">
-            </div>
-        </div>
-    </section>
 
-    <section id="contact" class="py-24 bg-apple-gray px-6 lg:px-8 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto reveal">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                
-                <div>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-6 leading-tight">Contact me</h2>
-                    <p class="text-lg text-apple-light mb-10 max-w-md">
-                        Tôi luôn sẵn sàng học hỏi, không ngại thử nghiệm các dạng nội dung mới và chủ động tiếp thu đóng góp để hoàn thiện kỹ năng Content Marketing mỗi ngày.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-apple-light">Điện thoại</p>
-                                <p class="text-lg font-medium text-apple-dark">0931 324 122</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-apple-light">Email</p>
-                                <p class="text-lg font-medium text-apple-dark">tt546892@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
-                                <i class="fas fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-apple-light">Địa chỉ</p>
-                                <p class="text-lg font-medium text-apple-dark">Thành phố Thủ Đức, TP. HCM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-apple">
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Tên của bạn</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors" placeholder="Nguyễn Văn A" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email liên hệ</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors" placeholder="email@domain.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Lời nhắn</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors resize-none" placeholder="Bạn muốn trao đổi về điều gì?" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-apple-dark text-white py-4 rounded-xl font-medium hover:bg-black transition-colors duration-300">
-                            Gửi tin nhắn
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
 
-    <footer class="py-8 bg-white border-t border-gray-100 text-center">
-        <p class="text-sm text-apple-light">© 2026 Trần Thị Thanh Thúy - Content Marketing.</p>
-    </footer>
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
 
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
-        <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer hover:text-gray-300 transition-colors">&times;</span>
-        <img id="lightbox-img" src="" alt="Full screen feedback" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
-    </div>
+                        <i class="fas fa-ear-listen text-xl"></i>
 
-    <script>
-        // 1. Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+                    </div>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+                    <h3 class="text-xl font-semibold mb-3">Tư duy Thấu cảm</h3>
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
+                    <p class="text-apple-light text-sm leading-relaxed text-justify">
 
-        // 2. Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
+                        Lắng nghe chủ động, đặt câu hỏi đúng trọng tâm và giải thích vấn đề một cách rõ ràng, dễ hiểu. Biến sự phức tạp thành hành động cụ thể.
 
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
+                    </p>
 
-        // 3. Navbar Shadow on Scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                navbar.classList.add('shadow-sm');
-            } else {
-                navbar.classList.remove('shadow-sm');
-            }
-        });
+                </div>
 
-        // 4. Xử lý Form Liên hệ (Chuyển hướng sang Gmail)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            const toEmail = 'tt546892@gmail.com';
-            
-            const subject = encodeURIComponent(`[Portfolio] Liên hệ từ ${name}`);
-            const body = encodeURIComponent(`Tên người gửi: ${name}\nEmail liên hệ: ${email}\n\nNội dung lời nhắn:\n${message}`);
-            
-            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${body}`;
-            
-            window.open(gmailLink, '_blank');
-        });
+                
 
-        // 5. Xử lý Lightbox (Phóng to ảnh)
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
 
-        function openLightbox(src) {
-            lightboxImg.src = src;
-            lightbox.classList.remove('hidden');
-            setTimeout(() => {
-                lightbox.classList.remove('opacity-0');
-                lightboxImg.classList.remove('scale-95');
-                lightboxImg.classList.add('scale-100');
-            }, 10);
-        }
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
 
-        function closeLightbox() {
-            lightbox.classList.add('opacity-0');
-            lightboxImg.classList.remove('scale-100');
-            lightboxImg.classList.add('scale-95');
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-            }, 300);
-        }
+                        <i class="fas fa-pen-nib text-xl"></i>
 
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && !lightbox.classList.contains('hidden')) {
-                closeLightbox();
-            }
-        });
-    </script>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Kỹ năng Cốt lõi</h3>
+
+                    <ul class="text-apple-light text-sm space-y-2">
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Hỗ trợ sự kiện</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Giao tiếp Tiếng Anh</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Thuyết phục khách hàng</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Viết lách và trình bày nội dung</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Lên ý tưởng, kịch bản và edit video</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Làm việc độc lập và teamwork</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
+
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
+
+                        <i class="fas fa-language text-xl"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Ngoại ngữ & Học vấn</h3>
+
+                    <p class="text-apple-dark font-medium text-sm mb-1">Cử nhân Quản lý Văn Hóa</p>
+
+                    <p class="text-apple-light text-sm mb-4">ĐH Văn Hóa TP.HCM (GPA 3.47/4.00)</p>
+
+                    <p class="text-apple-dark font-medium text-sm mb-1">Tiếng Anh (TOEIC)</p>
+
+                    <p class="text-apple-light text-sm">Reading & Listening: 550 <br> Speaking & Writing: 290</p>
+
+                </div>
+
+
+
+                <div class="bg-apple-gray rounded-3xl p-8 hover:shadow-apple-hover transition-shadow duration-300">
+
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-apple-dark">
+
+                        <i class="fas fa-laptop-code text-xl"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Công cụ thành thạo</h3>
+
+                    <ul class="text-apple-light text-sm space-y-2">
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Capcut</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>Canva</li>
+
+                        <li><i class="fas fa-check text-apple-accent mr-2"></i>AI Tools: Gemini, NotebookLM,...</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="experience" class="py-24 px-6 lg:px-8 max-w-5xl mx-auto reveal">
+
+        <div class="text-center mb-16">
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-4 leading-tight">Journey</h2>
+
+            <p class="text-apple-light text-lg">Kinh nghiệm làm việc và phát triển bản thân.</p>
+
+        </div>
+
+
+
+        <div class="relative border-l border-gray-200 ml-3 md:ml-6">
+
+            
+
+            <div class="mb-12 ml-8 md:ml-12 relative group">
+
+                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-apple-dark group-hover:bg-apple-accent transition-colors duration-300 shadow-sm"></span>
+
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+
+                    <h3 class="text-xl font-bold text-apple-dark">Tiktok Content Creator</h3>
+
+                    <span class="text-sm font-medium text-apple-accent bg-apple-accent/10 px-3 py-1 rounded-full w-max">2024 - Nay</span>
+
+                </div>
+
+                <p class="text-base font-medium text-gray-600 mb-3">Chủ kênh Tiktok Libra Tarot (7000+ followers)</p>
+
+                <p class="text-apple-light text-sm leading-relaxed text-justify">
+
+                    Nghiên cứu & Định vị Thương hiệu: Xác định ngách nội dung độc đáo (Tâm lý học kết hợp Huyền học), phân tích tệp người xem mục tiêu để xây dựng thành công cộng đồng 7.000 followers từ con số 0. Quản trị quy trình sản xuất nội dung: Chủ động thực hiện 100% các khâu từ nghiên cứu insight người xem, lên ý tưởng kịch bản độc lập, quay dựng đến hậu kỳ bằng CapCut để tối ưu hóa hiệu suất truyền tải hình ảnh và âm thanh. Ứng dụng kỹ năng chuyển hóa nội dung, chuyển đổi các kiến thức trừu tượng thành dạng video ngắn tạo sự hấp dẫn, dễ tiếp cận, giúp tăng tỷ lệ giữ chân người xem và thu hút lượng lớn khách hàng tiềm năng inbox tư vấn sâu. 
+
+                </p>
+
+            </div>
+
+                        
+
+            <div class="mb-12 ml-8 md:ml-12 relative group">
+
+                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-apple-dark group-hover:bg-apple-accent transition-colors duration-300 shadow-sm"></span>
+
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+
+                    <h3 class="text-xl font-bold text-apple-dark">Freelancer</h3>
+
+                    <span class="text-sm font-medium text-apple-accent bg-apple-accent/10 px-3 py-1 rounded-full w-max">2024 - Nay</span>
+
+                </div>
+
+                <p class="text-base font-medium text-gray-600 mb-3">Người tư vấn tâm lý và định hướng (Tarot Reader)</p>
+
+                <p class="text-apple-light text-sm leading-relaxed text-justify">
+
+                    Tiếp cận và lắng nghe trực tiếp câu chuyện của hàng trăm khách hàng chủ đề tình cảm và công việc thông qua các phiên tư vấn cá nhân, đưa ra giải pháp kết hợp từ tâm lý và huyền học để định hướng tương lai, từ đó rèn luyện khả năng thấu hiểu tâm lý, mong muốn thầm kín và những nỗi đau thực tế của tệp khách hàng trẻ. Đặt câu hỏi khai thác vấn đề thông minh, giải thích và định hướng giải pháp một cách rõ ràng, mạch lạc, giúp xây dựng niềm tin và độ uy tín cao cho thương hiệu cá nhân. Liên kết Content Marketing: Toàn bộ dữ liệu thực tế thu thập được từ quá trình tư vấn trực tiếp này sử dụng làm chất liệu thô giúp cung cấp ý tưởng, chủ đề bài viết và kịch bản video đánh trúng tâm lý số đông người xem trên kênh TikTok.
+
+                </p>
+
+            </div>
+
+            
+
+            <div class="mb-12 ml-8 md:ml-12 relative group">
+
+                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
+
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+
+                    <h3 class="text-xl font-bold text-apple-dark">Thực tập sinh Thuyết minh & Truyền thông</h3>
+
+                    <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-max">Tháng 3 - 6/2026</span>
+
+                </div>
+
+                <p class="text-base font-medium text-gray-600 mb-3">Bảo tàng Tôn Đức Thắng</p>
+
+                <p class="text-apple-light text-sm leading-relaxed text-justify">
+
+                    Hỗ trợ quay, dựng video content để quảng bá cho bảo tàng. Trực tiếp hỗ trợ thuyết minh về các thông tin lịch sử, cuộc đời và sự nghiệp Chủ tịch Tôn Đức Thắng cho khách tham quan.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mb-4 ml-8 md:ml-12 relative group">
+
+                <span class="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300 group-hover:bg-apple-dark transition-colors duration-300 shadow-sm"></span>
+
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+
+                    <h3 class="text-xl font-bold text-apple-dark">Thực tập sinh Tổ chức sự kiện</h3>
+
+                    <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-max">Tháng 6 - 7/2025</span>
+
+                </div>
+
+                <p class="text-base font-medium text-gray-600 mb-3">Trung tâm Văn Hóa TP. Thủ Đức</p>
+
+                <p class="text-apple-light text-sm leading-relaxed text-justify">
+
+                    Tham gia hỗ trợ tổ chức các hoạt động văn hóa, giáo dục cho thiếu nhi tại Đường sách Thủ Đức. Phối hợp chuẩn bị nội dung, hướng dẫn và tương tác trực tiếp với các em nhỏ trong các trò chơi thi đua kiến thức.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="projects" class="py-24 bg-apple-dark text-white px-6 lg:px-8 overflow-hidden relative">
+
+        <div class="absolute top-0 right-0 w-96 h-96 bg-apple-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+
+
+        <div class="max-w-7xl mx-auto relative z-10 reveal">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-white leading-tight">Project & Case Study</h2>
+
+                <p class="text-gray-400 text-lg">Dự án tiêu biểu & Các trường hợp tư vấn thành công.</p>
+
+            </div>
+
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                
+
+                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-apple-accent/20 overflow-hidden border border-gray-700 hover:border-apple-accent/50 flex flex-col h-full">
+
+                    
+
+                    <div class="flex justify-between items-start mb-6 relative z-10">
+
+                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
+
+                            <i class="fab fa-tiktok text-2xl text-white"></i>
+
+                        </div>
+
+                        <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full">Top Project</span>
+
+                    </div>
+
+                    
+
+                    <h3 class="text-2xl font-bold mb-2 relative z-10 transition-colors group-hover:text-apple-accent">Kênh TikTok Libra Tarot</h3>
+
+                    <p class="text-gray-400 text-sm mb-4 relative z-10">
+
+                        Xây dựng nội dung trải bài tarot đánh trúng insight khách hàng về tình cảm, công việc.
+
+                    </p>
+
+
+
+                    <div class="mb-6 relative z-10 flex-grow">
+
+                        <strong class="text-white block text-sm mb-3">Chủ đề khai thác:</strong>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-heart text-pink-400 mr-1.5"></i>Tình cảm</span>
+
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-briefcase text-blue-400 mr-1.5"></i>Công việc</span>
+
+                            <span class="px-3 py-1.5 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-600"><i class="fas fa-leaf text-green-400 mr-1.5"></i>Chữa lành</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="mt-auto relative z-10 w-full">
+
+                        <a href="https://www.tiktok.com/@healingwithlibra" target="_blank" class="flex items-center justify-center gap-2 bg-apple-accent text-white px-4 py-3 rounded-xl text-sm font-semibold hover:bg-yellow-600 transition-colors mb-6 shadow-md w-full">
+
+                            <i class="fas fa-play-circle"></i> Truy cập kênh TikTok
+
+                        </a>
+
+                        
+
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-700 pt-6">
+
+                            <div>
+
+                                <p class="text-3xl font-bold text-white mb-1">7K+</p>
+
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Followers</p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-3xl font-bold text-white mb-1">200K</p>
+
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Views/Clip</p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-2xl font-bold text-apple-accent mb-1">30+</p>
+
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách/Tháng</p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-2xl font-bold text-green-400 mb-1">80%</p>
+
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">Khách quay lại</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden border border-gray-700 hover:border-blue-500/50 cursor-pointer flex flex-col h-full">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                    
+
+                    <div class="mb-6 relative z-10">
+
+                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
+
+                            <i class="fas fa-heart-circle-check text-2xl text-blue-400"></i>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <h3 class="text-2xl font-bold mb-2 relative z-10">Case Study 1: Hàn gắn hôn nhân</h3>
+
+                    <div class="flex items-center gap-2 mb-4 relative z-10">
+
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">Thời gian: 1 năm</span>
+
+                    </div>
+
+                    
+
+                    <div class="space-y-4 text-sm text-gray-300 relative z-10 flex-grow flex flex-col">
+
+                        <div>
+
+                            <strong class="text-white block mb-1">Vấn đề:</strong>
+
+                            <p class="text-gray-400">Khách hàng nữ (có 1 bé 5 tuổi) tìm đến khi vợ chồng đang trên bờ vực ly hôn.</p>
+
+                        </div>
+
+                        <div>
+
+                            <strong class="text-blue-400 block mb-1">Giải pháp:</strong>
+
+                            <p>Đồng hành, tư vấn tâm lý thông qua thông điệp Tarot và tâm lý tình cảm học.</p>
+
+                        </div>
+
+                        <div class="mt-auto pt-4 space-y-3">
+
+                            <div class="bg-blue-500/10 p-3 rounded-xl border border-blue-500/20">
+
+                                <strong class="text-white block mb-1"><i class="fas fa-check-circle text-blue-400 mr-2"></i>Kết quả:</strong>
+
+                                <p>Vợ chồng đã hàn gắn thành công và sinh thêm một bé trai.</p>
+
+                            </div>
+
+                            
+
+                            <div class="grid grid-cols-3 gap-2">
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c11.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c12.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c13.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="group relative bg-[#2a2a2c] rounded-3xl p-8 transition-all duration-500 ease-in-out hover:-translate-y-3 hover:shadow-2xl hover:shadow-pink-500/20 overflow-hidden border border-gray-700 hover:border-pink-500/50 cursor-pointer flex flex-col h-full">
+
+                    <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                    
+
+                    <div class="mb-6 relative z-10">
+
+                        <div class="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-600">
+
+                            <i class="fas fa-ring text-2xl text-pink-400"></i>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <h3 class="text-2xl font-bold mb-2 relative z-10">Case Study 2: Định hướng tình cảm</h3>
+
+                    <div class="flex items-center gap-2 mb-4 relative z-10">
+
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">Thời gian: 1 năm</span>
+
+                    </div>
+
+                    
+
+                    <div class="space-y-4 text-sm text-gray-300 relative z-10 flex-grow flex flex-col">
+
+                        <div>
+
+                            <strong class="text-white block mb-1">Vấn đề:</strong>
+
+                            <p class="text-gray-400">Khách nữ yêu bạn trai lâu năm nhưng chưa cưới, nhiều lần ngắt kết nối, im lặng.</p>
+
+                        </div>
+
+                        <div>
+
+                            <strong class="text-pink-400 block mb-1">Giải pháp:</strong>
+
+                            <p>Phân tích vấn đề, định hướng tâm lý và đồng hành xử lý các khúc mắc trong mối quan hệ.</p>
+
+                        </div>
+
+                        <div class="mt-auto pt-4 space-y-3">
+
+                            <div class="bg-pink-500/10 p-3 rounded-xl border border-pink-500/20">
+
+                                <strong class="text-white block mb-1"><i class="fas fa-check-circle text-pink-400 mr-2"></i>Kết quả:</strong>
+
+                                <p>Cặp đôi tiến đến hôn nhân và hiện tại đã có em bé.</p>
+
+                            </div>
+
+                            
+
+                            <div class="grid grid-cols-3 gap-2">
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c21.jpg" alt="Feedback 1" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c22.jpg" alt="Feedback 2" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                                <div class="overflow-hidden rounded-lg border border-gray-700 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+
+                                    <img src="c23.jpg" alt="Feedback 3" class="w-full h-16 object-cover hover:scale-110 transition-transform duration-300">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="awards" class="py-24 bg-white px-6 lg:px-8">
+
+        <div class="max-w-4xl mx-auto reveal text-center">
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-12 leading-[1.2] md:leading-tight">Awards <br class="block md:hidden">& Certifications</h2>
+
+            
+
+            <div class="bg-apple-gray rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm inline-block w-full max-w-2xl">
+
+                <i class="fas fa-award text-5xl text-apple-accent mb-6"></i>
+
+                <h3 class="text-2xl font-bold text-apple-dark mb-2">Nhà sáng tạo triển vọng</h3>
+
+                <p class="text-lg text-gray-600 mb-4">Cuộc thi "Kết nối di sản - Sáng tạo tương lai"</p>
+
+                <p class="text-sm font-medium text-apple-light uppercase tracking-widest mb-8">Hội Di sản Văn Hóa TP. HCM</p>
+
+
+
+                <img src="a1.jpg" alt="Chứng nhận Nhà sáng tạo triển vọng" class="w-full h-auto rounded-xl shadow-md border border-gray-200 hover:scale-[1.02] transition-transform duration-500">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="contact" class="py-24 bg-apple-gray px-6 lg:px-8 border-t border-gray-200">
+
+        <div class="max-w-7xl mx-auto reveal">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+                
+
+                <div>
+
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-apple-dark mb-6 leading-tight">Contact me</h2>
+
+                    <p class="text-lg text-apple-light mb-10 max-w-md text-justify">
+
+                        Tôi luôn sẵn sàng học hỏi, không ngại thử nghiệm các dạng nội dung mới và chủ động tiếp thu đóng góp để hoàn thiện kỹ năng Content Marketing mỗi ngày.
+
+                    </p>
+
+                    
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
+
+                                <i class="fas fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm text-apple-light">Điện thoại</p>
+
+                                <p class="text-lg font-medium text-apple-dark">0931 324 122</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
+
+                                <i class="fas fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm text-apple-light">Email</p>
+
+                                <p class="text-lg font-medium text-apple-dark">tt546892@gmail.com</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-apple-dark">
+
+                                <i class="fas fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm text-apple-light">Địa chỉ</p>
+
+                                <p class="text-lg font-medium text-apple-dark">Thành phố Thủ Đức, TP. HCM</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-apple">
+
+                    <form id="contactForm" class="space-y-6">
+
+                        <div>
+
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Tên của bạn</label>
+
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors" placeholder="Nguyễn Văn A" required>
+
+                        </div>
+
+                        <div>
+
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email liên hệ</label>
+
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors" placeholder="email@domain.com" required>
+
+                        </div>
+
+                        <div>
+
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Lời nhắn</label>
+
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-apple-gray border-transparent focus:border-apple-dark focus:bg-white focus:ring-0 transition-colors resize-none" placeholder="Bạn muốn trao đổi về điều gì?" required></textarea>
+
+                        </div>
+
+                        <button type="submit" class="w-full bg-apple-dark text-white py-4 rounded-xl font-medium hover:bg-black transition-colors duration-300">
+
+                            Gửi tin nhắn
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer class="py-8 bg-white border-t border-gray-100 text-center">
+
+        <p class="text-sm text-apple-light">© 2026 Trần Thị Thanh Thúy - Content Marketing.</p>
+
+    </footer>
+
+
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+
+        <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer hover:text-gray-300 transition-colors">&times;</span>
+
+        <img id="lightbox-img" src="" alt="Full screen feedback" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+
+    </div>
+
+
+
+    <script>
+
+        // 1. Mobile Menu Toggle
+
+        const btn = document.getElementById('mobile-menu-btn');
+
+        const menu = document.getElementById('mobile-menu');
+
+
+
+        btn.addEventListener('click', () => {
+
+            menu.classList.toggle('hidden');
+
+        });
+
+
+
+        // Close mobile menu when clicking a link
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                menu.classList.add('hidden');
+
+            });
+
+        });
+
+
+
+        // 2. Scroll Reveal Animation
+
+        function reveal() {
+
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+
+                var windowHeight = window.innerHeight;
+
+                var elementTop = reveals[i].getBoundingClientRect().top;
+
+                var elementVisible = 100;
+
+
+
+                if (elementTop < windowHeight - elementVisible) {
+
+                    reveals[i].classList.add("active");
+
+                }
+
+            }
+
+        }
+
+        window.addEventListener("scroll", reveal);
+
+        reveal();
+
+
+
+        // 3. Navbar Shadow on Scroll
+
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 10) {
+
+                navbar.classList.add('shadow-sm');
+
+            } else {
+
+                navbar.classList.remove('shadow-sm');
+
+            }
+
+        });
+
+
+
+        // 4. Xử lý Form Liên hệ (Chuyển hướng sang Gmail)
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            
+
+            const name = document.getElementById('name').value;
+
+            const email = document.getElementById('email').value;
+
+            const message = document.getElementById('message').value;
+
+            
+
+            const toEmail = 'tt546892@gmail.com';
+
+            
+
+            const subject = encodeURIComponent(`[Portfolio] Liên hệ từ ${name}`);
+
+            const body = encodeURIComponent(`Tên người gửi: ${name}\nEmail liên hệ: ${email}\n\nNội dung lời nhắn:\n${message}`);
+
+            
+
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${body}`;
+
+            
+
+            window.open(gmailLink, '_blank');
+
+        });
+
+
+
+        // 5. Xử lý Lightbox (Phóng to ảnh)
+
+        const lightbox = document.getElementById('lightbox');
+
+        const lightboxImg = document.getElementById('lightbox-img');
+
+
+
+        function openLightbox(src) {
+
+            lightboxImg.src = src;
+
+            lightbox.classList.remove('hidden');
+
+            setTimeout(() => {
+
+                lightbox.classList.remove('opacity-0');
+
+                lightboxImg.classList.remove('scale-95');
+
+                lightboxImg.classList.add('scale-100');
+
+            }, 10);
+
+        }
+
+
+
+        function closeLightbox() {
+
+            lightbox.classList.add('opacity-0');
+
+            lightboxImg.classList.remove('scale-100');
+
+            lightboxImg.classList.add('scale-95');
+
+            setTimeout(() => {
+
+                lightbox.classList.add('hidden');
+
+            }, 300);
+
+        }
+
+
+
+        document.addEventListener('keydown', function(event) {
+
+            if (event.key === "Escape" && !lightbox.classList.contains('hidden')) {
+
+                closeLightbox();
+
+            }
+
+        });
+
+    </script>
+
 </body>
+
 </html>
